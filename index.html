@@ -1,22 +1,1066 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dalia Ebrahim | ICT Software Engineer & Developer Portfolio</title>
-    <meta name="description" content="Official portfolio of Dalia Ebrahim - Information and Communication Technology (Software Track) Engineer specializing in software engineering, embedded systems, robotics, and AI-driven applications." />
-    <meta name="keywords" content="Dalia Ebrahim, Software Engineer, ICT, Robotics, Embedded Systems, Flutter, Python, Unity, C#, Cairo Egypt" />
-    <meta property="og:title" content="Dalia Ebrahim | Portfolio" />
-    <meta property="og:description" content="ICT Graduate & Software Engineer specializing in software development, robotics, and embedded systems." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://github.com/daliaebrahim891-dotcom" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-slate-50 text-slate-900 dark:bg-[#0b0f19] dark:text-slate-100 transition-colors duration-300 antialiased selection:bg-cyan-500 selection:text-white">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dalia Ebrahim | ICT Software Engineer & Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Dalia Ebrahim - Information and Communication Technology (Software Track) Engineer with 3.5 GPA (Excellent), specializing in software development, robotics, and embedded systems.">
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#ecfeff',
+              100: '#cffafe',
+              200: '#a5f3fc',
+              300: '#67e8f9',
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+              700: '#0e7490',
+              800: '#155e75',
+              900: '#164e63',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .animate-fadeIn { animation: fadeIn 0.2s ease-out forwards; }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+    .dark ::-webkit-scrollbar-thumb { background: #334155; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-[#0b0f19] dark:text-slate-100 transition-colors duration-300 antialiased selection:bg-cyan-500 selection:text-white">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/85 dark:bg-[#0b0f19]/85 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80 py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <!-- Brand -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+            DE
+          </div>
+          <div>
+            <span class="text-lg font-bold tracking-tight text-slate-900 dark:text-white group-hover:text-cyan-500 transition-colors">
+              Dalia Ebrahim
+            </span>
+            <span class="hidden sm:block text-xs font-medium text-slate-500 dark:text-slate-400">
+              ICT Software Engineer
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden md:flex items-center gap-1 lg:gap-2">
+          <a href="#about" class="px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">About</a>
+          <a href="#skills" class="px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Skills</a>
+          <a href="#projects" class="px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Projects</a>
+          <a href="#experience" class="px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Experience</a>
+          <a href="#education" class="px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Education</a>
+          <a href="#github" class="px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">GitHub</a>
+          <a href="#contact" class="px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors">Contact</a>
+        </div>
+
+        <!-- Actions -->
+        <div class="hidden md:flex items-center gap-3">
+          <a href="https://raw.githubusercontent.com/daliaebrahim891-dotcom/Dalia-Ebrahim/main/Dalia%20Ebrahim's%20CV.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white shadow-sm hover:shadow-md transition-all active:scale-95">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download CV</span>
+          </a>
+
+          <button id="themeToggleBtn" type="button" aria-label="Toggle theme" class="p-2.5 rounded-xl bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-amber-400 hover:bg-slate-300 dark:hover:bg-slate-700 transition-all">
+            <span id="sunIcon" class="hidden">☀️</span>
+            <span id="moonIcon">🌙</span>
+          </button>
+        </div>
+
+        <!-- Mobile Controls -->
+        <div class="flex md:hidden items-center gap-2">
+          <button id="mobileThemeToggleBtn" type="button" class="p-2.5 rounded-xl bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-amber-400">
+            <span id="mobileSunIcon" class="hidden">☀️</span>
+            <span id="mobileMoonIcon">🌙</span>
+          </button>
+          <button id="menuToggleBtn" type="button" class="p-2.5 rounded-xl bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 pt-3 pb-6 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl">
+      <div class="flex flex-col gap-1.5">
+        <a href="#about" class="mobile-nav-link px-4 py-2.5 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-cyan-500 rounded-lg">About</a>
+        <a href="#skills" class="mobile-nav-link px-4 py-2.5 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-cyan-500 rounded-lg">Skills</a>
+        <a href="#projects" class="mobile-nav-link px-4 py-2.5 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-cyan-500 rounded-lg">Projects</a>
+        <a href="#experience" class="mobile-nav-link px-4 py-2.5 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-cyan-500 rounded-lg">Experience</a>
+        <a href="#education" class="mobile-nav-link px-4 py-2.5 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-cyan-500 rounded-lg">Education</a>
+        <a href="#github" class="mobile-nav-link px-4 py-2.5 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-cyan-500 rounded-lg">GitHub</a>
+        <a href="#contact" class="mobile-nav-link px-4 py-2.5 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-cyan-500 rounded-lg">Contact</a>
+        <div class="pt-3 mt-2 border-t border-slate-200 dark:border-slate-800">
+          <a href="https://raw.githubusercontent.com/daliaebrahim891-dotcom/Dalia-Ebrahim/main/Dalia%20Ebrahim's%20CV.pdf" target="_blank" class="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold rounded-xl bg-cyan-600 text-white">
+            Download CV (PDF)
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-cyan-500/10 dark:bg-cyan-500/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+        
+        <div class="flex-1 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50 dark:bg-cyan-950/60 border border-cyan-200 dark:border-cyan-800/80 text-cyan-700 dark:text-cyan-300 text-xs sm:text-sm font-medium mb-6">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Available for Software Engineering & Systems Roles</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4 leading-tight">
+            Hi, I'm <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 dark:from-cyan-400 dark:via-blue-400 dark:to-indigo-300">Dalia Ebrahim</span>
+          </h1>
+
+          <p class="text-xl sm:text-2xl font-semibold text-slate-700 dark:text-slate-200 mb-5">
+            Information and Communication Technology (ICT) Software Engineer
+          </p>
+
+          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+            Highly motivated ICT graduate with an <strong class="text-slate-900 dark:text-white font-semibold">Excellent distinction (3.5 GPA)</strong> from New Cairo Technological University. Specializing in software development, embedded robotics, and AI-driven applications.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
+            <a href="#projects" class="px-6 py-3.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-semibold text-base shadow-lg shadow-cyan-600/25 transition-all">
+              View My Projects
+            </a>
+            <a href="#contact" class="px-6 py-3.5 rounded-xl bg-slate-200/80 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-base transition-all border border-slate-300/60 dark:border-slate-700">
+              Contact Me
+            </a>
+            <a href="https://raw.githubusercontent.com/daliaebrahim891-dotcom/Dalia-Ebrahim/main/Dalia%20Ebrahim's%20CV.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl text-cyan-600 dark:text-cyan-400 font-semibold text-base border border-cyan-600/40 dark:border-cyan-400/40 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+              <span>Download CV (PDF)</span>
+            </a>
+          </div>
+
+          <!-- Socials -->
+          <div class="flex items-center justify-center lg:justify-start gap-4">
+            <span class="text-xs uppercase tracking-wider font-semibold text-slate-500">Connect:</span>
+            <a href="https://github.com/daliaebrahim891-dotcom" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-cyan-500 transition-colors">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/dalia-ebrahim-09b48431a" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-cyan-500 transition-colors">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="mailto:daliaebrahim891@gmail.com" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-cyan-500 transition-colors">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Card -->
+        <div class="w-full max-w-md lg:max-w-lg">
+          <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-7 shadow-xl">
+            <div class="flex items-center justify-between pb-4 mb-5 border-b border-slate-100 dark:border-slate-800 font-mono text-xs text-slate-400">
+              <div class="flex gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+              </div>
+              <span>dalia-engineer.ts</span>
+            </div>
+            <div class="font-mono text-xs sm:text-sm leading-relaxed text-slate-700 dark:text-slate-300 space-y-2">
+              <p><span class="text-purple-500">const</span> <span class="text-blue-500">softwareEngineer</span> = {</p>
+              <p class="pl-4"><span class="text-slate-400">name:</span> <span class="text-emerald-500">'Dalia Ebrahim'</span>,</p>
+              <p class="pl-4"><span class="text-slate-400">degree:</span> <span class="text-emerald-500">'B.Sc. ICT (Software Track)'</span>,</p>
+              <p class="pl-4"><span class="text-slate-400">university:</span> <span class="text-emerald-500">'New Cairo Technological Univ'</span>,</p>
+              <p class="pl-4"><span class="text-slate-400">gpa:</span> <span class="text-cyan-400">3.5</span>, <span class="text-slate-500">// Honors (Excellent)</span></p>
+              <p class="pl-4"><span class="text-slate-400">graduationProject:</span> <span class="text-amber-400">'CouBot Delivery Robot'</span>,</p>
+              <p class="pl-4"><span class="text-slate-400">wadhwaniScore:</span> <span class="text-cyan-400">98%</span></p>
+              <p>};</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="mt-16 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-cyan-500">3.5/4.0</div>
+          <div class="text-sm font-semibold text-slate-900 dark:text-white mt-1">Academic GPA</div>
+          <div class="text-xs text-slate-500 mt-0.5">Grade: Excellent (Honors)</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-cyan-500">9+</div>
+          <div class="text-sm font-semibold text-slate-900 dark:text-white mt-1">Featured Projects</div>
+          <div class="text-xs text-slate-500 mt-0.5">AI, Robotics, Web & Mobile</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-cyan-500">7</div>
+          <div class="text-sm font-semibold text-slate-900 dark:text-white mt-1">Industry Programs</div>
+          <div class="text-xs text-slate-500 mt-0.5">ITI, ERI, CIB, Wadhwani</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-cyan-500">C1</div>
+          <div class="text-sm font-semibold text-slate-900 dark:text-white mt-1">English Proficiency</div>
+          <div class="text-xs text-slate-500 mt-0.5">Advanced Working Proficiency</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-20 bg-white dark:bg-slate-900/60 border-y border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-100 dark:bg-cyan-950/80 text-cyan-800 dark:text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-3">
+          Profile Overview
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">About Me</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-7 space-y-5 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+          <p class="text-lg text-slate-800 dark:text-slate-100 font-medium">
+            I am a graduate in Information and Communication Technology (ICT) from <strong class="text-slate-900 dark:text-white">New Cairo Technological University</strong> with a <strong class="text-cyan-500">3.5 GPA (Grade: Excellent)</strong>.
+          </p>
+          <p>
+            My passion is at the intersection of software architecture and hardware systems: whether building <strong class="text-slate-900 dark:text-white">autonomous delivery robots (CouBot)</strong>, developing <strong class="text-slate-900 dark:text-white">gesture-controlled AI virtual mice</strong>, designing multi-axis <strong class="text-slate-900 dark:text-white">robotic arms</strong>, or creating cross-platform mobile apps with <strong class="text-slate-900 dark:text-white">Flutter and Firebase</strong>.
+          </p>
+          <p>
+            I have trained at Egypt's leading institutes including <strong class="text-slate-900 dark:text-white">Electronics Research Institute (ERI)</strong> in AI & Machine Learning, <strong class="text-slate-900 dark:text-white">Information Technology Institute (ITI)</strong> in Game Development, and scored <strong class="text-cyan-500">98% on the Wadhwani Foundation Skill Readiness Certificate</strong>.
+          </p>
+          <div class="pt-4 flex flex-wrap gap-3">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">📍 Cairo, Egypt</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">🎓 B.Sc. ICT (Software Track)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">🌐 English: C1 Proficiency</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-4">
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Software & App Development</h3>
+            <p class="mt-1.5 text-sm text-slate-600 dark:text-slate-400">Python, C#, C++, Java, Dart, JavaScript, Flutter apps, .NET desktop solutions, and SQL/Firestore databases.</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Robotics & Embedded Systems</h3>
+            <p class="mt-1.5 text-sm text-slate-600 dark:text-slate-400">Autonomous robotic controllers, PIC & Arduino microcontroller circuits, sensor arrays, motor actuators, and IoT telemetry.</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">AI, Computer Vision & UI/UX</h3>
+            <p class="mt-1.5 text-sm text-slate-600 dark:text-slate-400">OpenCV landmark gesture recognition, 2D Unity physics game loops, and Figma high-fidelity mobile & dashboard prototyping.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="py-20 bg-slate-50 dark:bg-[#0b0f19]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-100 dark:bg-cyan-950/80 text-cyan-800 dark:text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-3">
+          Technical Arsenal
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Skills & Technologies</h2>
+        <p class="mt-3 text-base text-slate-600 dark:text-slate-400">Categorized technologies extracted directly from Dalia's CV and code repositories.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Programming Languages -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Programming Languages</h3>
+          <p class="text-xs text-slate-500 mb-4">Core languages used for algorithms, hardware logic, and web/desktop apps.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Python</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">C#</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">C / C++</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Java</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">JavaScript</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">PHP</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Dart</span>
+          </div>
+        </div>
+
+        <!-- App & Web -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">App & Web Development</h3>
+          <p class="text-xs text-slate-500 mb-4">Frameworks and ecosystems for mobile and web systems.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Flutter (App Dev)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">.NET Framework</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Front-End Web Dev</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Back-End Web Dev</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">REST APIs</span>
+          </div>
+        </div>
+
+        <!-- Robotics & Embedded -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Robotics & Embedded</h3>
+          <p class="text-xs text-slate-500 mb-4">Microcontrollers, circuit architecture, and hardware control.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Embedded Systems</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Arduino</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">PIC Microcontrollers</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Robotics Control</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Network Programming</span>
+          </div>
+        </div>
+
+        <!-- AI & Game Dev -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">AI, Vision & Game Dev</h3>
+          <p class="text-xs text-slate-500 mb-4">Computer vision pipelines, gesture models, and Unity 2D physics.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">OpenCV</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Gesture Recognition</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">AI & ML Models</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Unity (2D Game Dev)</span>
+          </div>
+        </div>
+
+        <!-- Databases & Cloud -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Databases & Cloud</h3>
+          <p class="text-xs text-slate-500 mb-4">Relational data design and cloud NoSQL databases.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">MySQL</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Firebase Firestore</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Database Management</span>
+          </div>
+        </div>
+
+        <!-- Design & Tools -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">UI/UX, Tools & Languages</h3>
+          <p class="text-xs text-slate-500 mb-4">Design prototypes, version control, and linguistic skills.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Figma</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">UI/UX Wireframing</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Git & GitHub</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">English (C1 Proficiency)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-medium">Arabic (Native)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="py-20 bg-white dark:bg-slate-900/40 border-y border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-100 dark:bg-cyan-950/80 text-cyan-800 dark:text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-3">
+          Portfolio Highlights
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Featured Projects</h2>
+        <p class="mt-3 text-base text-slate-600 dark:text-slate-400">All 9 verified engineering projects from Dalia's CV.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-12" id="projectFilterContainer">
+        <button onclick="filterProjects('all')" class="filter-btn active px-4 py-2.5 rounded-xl text-sm font-semibold bg-cyan-600 text-white shadow-md">All Projects (9)</button>
+        <button onclick="filterProjects('robotics-ai')" class="filter-btn px-4 py-2.5 rounded-xl text-sm font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Robotics & AI (3)</button>
+        <button onclick="filterProjects('mobile-web')" class="filter-btn px-4 py-2.5 rounded-xl text-sm font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Mobile & Web (4)</button>
+        <button onclick="filterProjects('games-systems')" class="filter-btn px-4 py-2.5 rounded-xl text-sm font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Games & Systems (2)</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7" id="projectsGrid">
+        
+        <!-- Project 1: CouBot -->
+        <div class="project-card robotics-ai rounded-2xl border border-cyan-500/50 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-cyan-50 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300">Graduation Project</span>
+              <span class="text-xs text-slate-500 font-mono">Sep 2025 – Jul 2026</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">CouBot Delivery Robot</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">Autonomous delivery robot integrated with a customer mobile ordering application and a centralized web-based monitoring system.</p>
+            <div class="space-y-1 mb-4 text-xs text-slate-500">
+              <div>▸ Centralized web monitoring dashboard for telemetry</div>
+              <div>▸ Client mobile ordering app built for seamless deliveries</div>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Robotics Control</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Flutter</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Web Dashboard</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">IoT</span>
+            </div>
+          </div>
+          <button onclick="openModal('coubot')" class="text-sm font-semibold text-cyan-600 dark:text-cyan-400 hover:underline">View Architecture Details →</button>
+        </div>
+
+        <!-- Project 2: Virtual Mouse -->
+        <div class="project-card robotics-ai rounded-2xl border border-cyan-500/50 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-cyan-50 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300">Semi-Graduation Project</span>
+              <span class="text-xs text-slate-500 font-mono">Oct 2023 – Jul 2024</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Virtual Mouse — AI Gesture Control</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">Engineered a touchless gesture-controlled virtual mouse using AI models and computer vision techniques for real-time cursor actions.</p>
+            <div class="space-y-1 mb-4 text-xs text-slate-500">
+              <div>▸ Real-time hand landmark tracking via standard webcam</div>
+              <div>▸ Gesture mapping for cursor navigation, click, and drag</div>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Python</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">OpenCV</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">AI Models</span>
+            </div>
+          </div>
+          <button onclick="openModal('virtual-mouse')" class="text-sm font-semibold text-cyan-600 dark:text-cyan-400 hover:underline">View Architecture Details →</button>
+        </div>
+
+        <!-- Project 3: Robotic Spray Arm -->
+        <div class="project-card robotics-ai rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Robotics</span>
+              <span class="text-xs text-slate-500 font-mono">Apr 2026</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Robotic Spray Painting Arm</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">Designed and implemented an articulated robotic arm capable of precision spray painting operated via ergonomic hand controller.</p>
+            <div class="space-y-1 mb-4 text-xs text-slate-500">
+              <div>▸ Multi-axis angular articulation and motor drivers</div>
+              <div>▸ Operator isolation from hazardous paint aerosols</div>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Robotics</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Microcontrollers</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Hardware Control</span>
+            </div>
+          </div>
+          <button onclick="openModal('spray-arm')" class="text-sm font-semibold text-cyan-600 dark:text-cyan-400 hover:underline">View Architecture Details →</button>
+        </div>
+
+        <!-- Project 4: Restaurant Dashboard -->
+        <div class="project-card mobile-web rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Web & UI/UX</span>
+              <span class="text-xs text-slate-500 font-mono">Apr 2026</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Restaurant Management Dashboard</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">Administrative web dashboard featuring data visualization for sales rates, inventory replenishment alerts, and product tracking.</p>
+            <div class="space-y-1 mb-4 text-xs text-slate-500">
+              <div>▸ Interactive charts for daily & monthly sales metrics</div>
+              <div>▸ Live stock management and order status tracking</div>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Figma</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Data Visualization</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Web UI</span>
+            </div>
+          </div>
+          <button onclick="openModal('restaurant-dashboard')" class="text-sm font-semibold text-cyan-600 dark:text-cyan-400 hover:underline">View Architecture Details →</button>
+        </div>
+
+        <!-- Project 5: Food Ordering .NET -->
+        <div class="project-card mobile-web rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">.NET Desktop</span>
+              <span class="text-xs text-slate-500 font-mono">Dec 2025</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Food Ordering App (.NET Desktop)</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">Fully functional C# .NET desktop interface featuring customer kiosk ordering and an employee-only backend for live menu pricing.</p>
+            <div class="space-y-1 mb-4 text-xs text-slate-500">
+              <div>▸ Dual-access customer kiosk vs. employee admin portal</div>
+              <div>▸ Real-time menu price modifications and media support</div>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">C#</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">.NET Framework</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Desktop GUI</span>
+            </div>
+          </div>
+          <button onclick="openModal('food-desktop')" class="text-sm font-semibold text-cyan-600 dark:text-cyan-400 hover:underline">View Architecture Details →</button>
+        </div>
+
+        <!-- Project 6: Mobile Food Ordering UI -->
+        <div class="project-card mobile-web rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">UI/UX Design</span>
+              <span class="text-xs text-slate-500 font-mono">Dec 2025</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Mobile Food Ordering UI/UX</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">High-fidelity Figma wireframes and prototypes centered on intuitive navigation, frictionless checkout, and accessible design.</p>
+            <div class="space-y-1 mb-4 text-xs text-slate-500">
+              <div>▸ Accessible 3-step checkout flow</div>
+              <div>▸ Mobile design system with custom components in Figma</div>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Figma</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Wireframing</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Prototyping</span>
+            </div>
+          </div>
+          <button onclick="openModal('food-ui')" class="text-sm font-semibold text-cyan-600 dark:text-cyan-400 hover:underline">View Architecture Details →</button>
+        </div>
+
+        <!-- Project 7: Hadeity App -->
+        <div class="project-card mobile-web rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Mobile App</span>
+              <span class="text-xs text-slate-500 font-mono">Apr 2025</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Hadeity — Gift List Sharing App</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">Cross-platform mobile app built using Flutter and Firebase Firestore for sharing gift wishlists among friends with real-time sync.</p>
+            <div class="space-y-1 mb-4 text-xs text-slate-500">
+              <div>▸ Cloud Firestore database synchronization</div>
+              <div>▸ Anonymous gift reservation to prevent duplicate gifts</div>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Flutter</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Dart</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Firestore</span>
+            </div>
+          </div>
+          <button onclick="openModal('hadeity')" class="text-sm font-semibold text-cyan-600 dark:text-cyan-400 hover:underline">View Architecture Details →</button>
+        </div>
+
+        <!-- Project 8: Milo's Adventure -->
+        <div class="project-card games-systems rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Unity 2D Game</span>
+              <span class="text-xs text-slate-500 font-mono">Aug 2025</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Milo's Adventure (2D Game)</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">Fully playable 2D adventure game featuring custom sprite animations, sound design, and complex level architecture in Unity & C#.</p>
+            <div class="space-y-1 mb-4 text-xs text-slate-500">
+              <div>▸ Kinematic physics controller and enemy patrol AI</div>
+              <div>▸ Audio mixing for ambient soundtracks and collision SFX</div>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Unity</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">C#</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">2D Physics</span>
+            </div>
+          </div>
+          <button onclick="openModal('milo')" class="text-sm font-semibold text-cyan-600 dark:text-cyan-400 hover:underline">View Architecture Details →</button>
+        </div>
+
+        <!-- Project 9: Embedded Systems Manual -->
+        <div class="project-card games-systems rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Embedded Systems</span>
+              <span class="text-xs text-slate-500 font-mono">Apr 2025</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Embedded Systems Manual & 16 Circuits</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">Collaborated on an extensive technical engineering manual documenting 16 custom embedded system circuits using PIC & Arduino microcontrollers.</p>
+            <div class="space-y-1 mb-4 text-xs text-slate-500">
+              <div>▸ Complete circuit schematics and peripheral drivers</div>
+              <div>▸ Interfaced sensors, stepper motors, and LCD modules</div>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">PIC Microcontrollers</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Arduino</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-xs">Embedded C</span>
+            </div>
+          </div>
+          <button onclick="openModal('embedded-doc')" class="text-sm font-semibold text-cyan-600 dark:text-cyan-400 hover:underline">View Architecture Details →</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE & TRAINING SECTION -->
+  <section id="experience" class="py-20 bg-slate-50 dark:bg-[#0b0f19]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-100 dark:bg-cyan-950/80 text-cyan-800 dark:text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-3">
+          Milestones
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Professional Training & Experience</h2>
+        <p class="mt-3 text-base text-slate-600 dark:text-slate-400">All 7 specialized technical training programs and industry certifications from Dalia's CV.</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto space-y-6">
+        <!-- Item 1: Wadhwani -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
+            <span class="font-bold text-base text-slate-900 dark:text-white">Wadhwani Foundation</span>
+            <span class="font-mono text-xs text-slate-500">Apr 2026 – May 2026</span>
+          </div>
+          <div class="text-sm font-semibold text-cyan-600 dark:text-cyan-400 mb-2">Skill Readiness Certificate</div>
+          <div class="inline-block px-2.5 py-1 rounded bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 text-xs font-bold mb-3">
+            ★ Assessment Score: 98% (High Distinction)
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Successfully completed Employability Skills assessment with an outstanding 98% score, proving mastery in workplace critical thinking, teamwork, and project execution.</p>
+        </div>
+
+        <!-- Item 2: Be Ready Initiative -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
+            <span class="font-bold text-base text-slate-900 dark:text-white">Be Ready Initiative</span>
+            <span class="font-mono text-xs text-slate-500">Aug 2025</span>
+          </div>
+          <div class="text-sm font-semibold text-cyan-600 dark:text-cyan-400 mb-2">Professional Life and Future Skills</div>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Trained on future workplace competencies, personal life skills, career readiness, and leadership agility.</p>
+        </div>
+
+        <!-- Item 3: ITI -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
+            <span class="font-bold text-base text-slate-900 dark:text-white">Information Technology Institute (ITI)</span>
+            <span class="font-mono text-xs text-slate-500">Jul 2025</span>
+          </div>
+          <div class="text-sm font-semibold text-cyan-600 dark:text-cyan-400 mb-2">Game Development Fundamentals</div>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Learned core game development concepts and engineered games using Unity and C# with physics and state machines.</p>
+        </div>
+
+        <!-- Item 4: CIB Summer Program -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
+            <span class="font-bold text-base text-slate-900 dark:text-white">CIB (Commercial International Bank) Summer Program</span>
+            <span class="font-mono text-xs text-slate-500">Aug 2024 – Sep 2024</span>
+          </div>
+          <div class="text-sm font-semibold text-cyan-600 dark:text-cyan-400 mb-2">Digital Transformation, Data Literacy & Entrepreneurial Skills</div>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Studied digital transformation roadmaps, enterprise data literacy, financial literacy, and human-centric interpersonal skills.</p>
+        </div>
+
+        <!-- Item 5: UCCD Digital Marketing -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
+            <span class="font-bold text-base text-slate-900 dark:text-white">University Center for Career Development (UCCD)</span>
+            <span class="font-mono text-xs text-slate-500">Aug 2024</span>
+          </div>
+          <div class="text-sm font-semibold text-cyan-600 dark:text-cyan-400 mb-2">Digital Marketing (Special Recognition)</div>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Formally recognized by instructors for active participation and pitching creative, unique marketing ideas and strategies.</p>
+        </div>
+
+        <!-- Item 6: UCCD & Aspire Consulting -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
+            <span class="font-bold text-base text-slate-900 dark:text-white">UCCD & Aspire Consulting</span>
+            <span class="font-mono text-xs text-slate-500">Sep 2024</span>
+          </div>
+          <div class="text-sm font-semibold text-cyan-600 dark:text-cyan-400 mb-2">Employability and Career Readiness</div>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Direct mentorship from experienced industry professionals on technical communication and corporate career navigation.</p>
+        </div>
+
+        <!-- Item 7: ERI -->
+        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
+            <span class="font-bold text-base text-slate-900 dark:text-white">Electronics Research Institute (ERI)</span>
+            <span class="font-mono text-xs text-slate-500">Aug 2023 – Sep 2023</span>
+          </div>
+          <div class="text-sm font-semibold text-cyan-600 dark:text-cyan-400 mb-2">AI and Machine Learning (Special Recognition)</div>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Recognized for rapid learning and swift adaptation to novel AI technologies, supervised algorithms, and neural networks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION SECTION -->
+  <section id="education" class="py-20 bg-white dark:bg-slate-900/60 border-y border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-100 dark:bg-cyan-950/80 text-cyan-800 dark:text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-3">
+          Academic Qualification
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Education</h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto p-8 rounded-3xl bg-gradient-to-br from-slate-50 to-cyan-50/30 dark:from-slate-900 dark:to-cyan-950/20 border border-slate-200 dark:border-slate-800 shadow-md">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-6 border-b border-slate-200 dark:border-slate-800 gap-4">
+          <div>
+            <div class="text-xs font-mono font-semibold text-cyan-500">Graduation Year: 2026</div>
+            <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white mt-1">
+              Bachelor of Information and Communication Technology
+            </h3>
+            <div class="text-sm font-medium text-slate-600 dark:text-slate-300 mt-0.5">Software Track</div>
+          </div>
+          <div class="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center">
+            <div class="text-xs text-slate-500">Cumulative GPA</div>
+            <div class="text-xl font-extrabold text-cyan-500">3.5 / 4.0</div>
+          </div>
+        </div>
+
+        <div class="py-6 space-y-2">
+          <div class="text-lg font-bold text-slate-800 dark:text-slate-200">🏛️ New Cairo Technological University</div>
+          <div class="text-sm text-slate-600 dark:text-slate-400 pl-7">Faculty of Industry and Energy Technology • Oct 2022 – Jul 2026</div>
+          <div class="pl-7 pt-2">
+            <span class="inline-block px-3 py-1 rounded bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 text-xs font-bold">
+              🏆 Degree Standing: Excellent (Honors)
+            </span>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Academic Highlights</div>
+          <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li class="flex items-start gap-2"><span class="text-cyan-500 font-bold">✓</span><span>Graduated with top academic standing (3.5 GPA with Excellent distinction)</span></li>
+            <li class="flex items-start gap-2"><span class="text-cyan-500 font-bold">✓</span><span>Advanced coursework: Software Engineering, Robotics Control, Embedded Systems, Network Programming, Databases</span></li>
+            <li class="flex items-start gap-2"><span class="text-cyan-500 font-bold">✓</span><span>Delivered flagship CouBot autonomous delivery robot and AI gesture virtual mouse</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GITHUB SECTION -->
+  <section id="github" class="py-20 bg-slate-50 dark:bg-[#0b0f19]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-100 dark:bg-cyan-950/80 text-cyan-800 dark:text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-3">
+          Open Source
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">GitHub Activity & Work</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-4 p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm text-center">
+          <img src="https://avatars.githubusercontent.com/u/244608490?v=4" alt="Dalia Ebrahim" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-cyan-500/20 shadow">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Dalia Ebrahim</h3>
+          <p class="text-sm font-mono text-cyan-500 mb-4">@daliaebrahim891-dotcom</p>
+          <a href="https://github.com/daliaebrahim891-dotcom" target="_blank" rel="noopener noreferrer" class="w-full inline-block py-2.5 px-4 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-semibold">
+            View GitHub Profile
+          </a>
+        </div>
+
+        <div class="lg:col-span-8 space-y-4">
+          <!-- Repo 1 -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <a href="https://github.com/daliaebrahim891-dotcom/Dalia-Ebrahim" target="_blank" class="text-lg font-bold text-slate-900 dark:text-white hover:text-cyan-500">Dalia-Ebrahim</a>
+                <span class="text-[10px] uppercase font-bold px-2 py-0.5 rounded-full bg-cyan-100 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300">CV Repository</span>
+              </div>
+              <p class="text-sm text-slate-600 dark:text-slate-400">Primary repository hosting Dalia's official CV PDF file (Dalia Ebrahim's CV.pdf).</p>
+            </div>
+            <a href="https://github.com/daliaebrahim891-dotcom/Dalia-Ebrahim" target="_blank" class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-semibold">Open Repo →</a>
+          </div>
+
+          <!-- Repo 2 -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <a href="https://github.com/daliaebrahim891-dotcom/icareercv" target="_blank" class="text-lg font-bold text-slate-900 dark:text-white hover:text-cyan-500">icareercv</a>
+              </div>
+              <p class="text-sm text-slate-600 dark:text-slate-400">Coursework verification repository established for career development milestones.</p>
+            </div>
+            <a href="https://github.com/daliaebrahim891-dotcom/icareercv" target="_blank" class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-semibold">Open Repo →</a>
+          </div>
+
+          <!-- Repo 3 -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <a href="https://github.com/daliaebrahim891-dotcom/project" target="_blank" class="text-lg font-bold text-slate-900 dark:text-white hover:text-cyan-500">project</a>
+              </div>
+              <p class="text-sm text-slate-600 dark:text-slate-400">Development and software prototyping repository for ongoing code work.</p>
+            </div>
+            <a href="https://github.com/daliaebrahim891-dotcom/project" target="_blank" class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-semibold">Open Repo →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-20 bg-white dark:bg-slate-900/60 border-t border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-100 dark:bg-cyan-950/80 text-cyan-800 dark:text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-3">
+          Get in Touch
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Contact Me</h2>
+        <p class="mt-3 text-base text-slate-600 dark:text-slate-400">Let's discuss software engineering opportunities or collaborations.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start max-w-6xl mx-auto">
+        <div class="lg:col-span-5 space-y-4">
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+            <div class="text-xs text-slate-500">Email Address</div>
+            <a href="mailto:daliaebrahim891@gmail.com" class="text-base font-semibold text-slate-900 dark:text-white hover:text-cyan-500">daliaebrahim891@gmail.com</a>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+            <div class="text-xs text-slate-500">Direct Phone</div>
+            <a href="tel:+201098775092" class="text-base font-semibold text-slate-900 dark:text-white hover:text-cyan-500">+20 109 877 5092</a>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+            <div class="text-xs text-slate-500">Location</div>
+            <div class="text-base font-semibold text-slate-900 dark:text-white">Cairo, Egypt</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+            <div class="text-xs text-slate-500">LinkedIn Profile</div>
+            <a href="https://www.linkedin.com/in/dalia-ebrahim-09b48431a" target="_blank" rel="noopener noreferrer" class="text-base font-semibold text-slate-900 dark:text-white hover:text-cyan-500">linkedin.com/in/dalia-ebrahim</a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Send a Message</h3>
+            <p class="text-sm text-slate-500 mb-6">Write your inquiry below to send directly to Dalia Ebrahim.</p>
+            
+            <form id="contactForm" class="space-y-4" onsubmit="handleContactSubmit(event)">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase mb-1">Your Name *</label>
+                  <input type="text" id="senderName" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase mb-1">Your Email *</label>
+                  <input type="email" id="senderEmail" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white">
+                </div>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase mb-1">Subject</label>
+                <input type="text" id="senderSubject" placeholder="Software Engineering Opportunity" class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase mb-1">Message *</label>
+                <textarea id="senderMessage" required rows="4" placeholder="Your message..." class="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-900 dark:text-white resize-none"></textarea>
+              </div>
+              <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-semibold text-sm shadow">
+                Send Direct Message
+              </button>
+            </form>
+
+            <div id="formSuccess" class="hidden mt-4 p-5 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-200 text-sm text-center">
+              ✓ Thank you! Your message has been formatted. You can also email directly to <a href="mailto:daliaebrahim891@gmail.com" class="underline font-bold">daliaebrahim891@gmail.com</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 bg-slate-100 dark:bg-[#070a11] border-t border-slate-200 dark:border-slate-800 text-slate-500 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-sm">DE</div>
+        <div>
+          <div class="font-bold text-slate-900 dark:text-white">Dalia Ebrahim</div>
+          <div class="text-xs">ICT Software Engineer • New Cairo Tech Univ (GPA 3.5)</div>
+        </div>
+      </div>
+      <div class="text-xs text-center font-mono">
+        © 2026 Dalia Ebrahim. 100% verified CV and GitHub data.
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL DIALOG -->
+  <div id="projectModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onclick="closeModal()">
+    <div class="relative w-full max-w-2xl bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl p-6 sm:p-8" onclick="event.stopPropagation()">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <span id="modalCategory" class="text-xs font-semibold px-2.5 py-0.5 rounded bg-cyan-100 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300">Category</span>
+          <h3 id="modalTitle" class="text-2xl font-bold text-slate-900 dark:text-white mt-1">Project Title</h3>
+        </div>
+        <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
+      </div>
+      <p id="modalDesc" class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-6"></p>
+      <div class="mb-6">
+        <div class="text-xs font-bold uppercase text-slate-400 mb-2">Key Features:</div>
+        <ul id="modalFeatures" class="space-y-1.5 text-sm text-slate-700 dark:text-slate-300"></ul>
+      </div>
+      <div>
+        <div class="text-xs font-bold uppercase text-slate-400 mb-2">Technologies Used:</div>
+        <div id="modalTech" class="flex flex-wrap gap-2"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Theme toggle
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const mobileThemeBtn = document.getElementById('mobileThemeToggleBtn');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+    const mobileSunIcon = document.getElementById('mobileSunIcon');
+    const mobileMoonIcon = document.getElementById('mobileMoonIcon');
+
+    function updateIcons(isDark) {
+      if (isDark) {
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+        mobileSunIcon.classList.remove('hidden');
+        mobileMoonIcon.classList.add('hidden');
+      } else {
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+        mobileSunIcon.classList.add('hidden');
+        mobileMoonIcon.classList.remove('hidden');
+      }
+    }
+
+    function toggleTheme() {
+      html.classList.toggle('dark');
+      const isDark = html.classList.contains('dark');
+      updateIcons(isDark);
+    }
+
+    themeBtn.addEventListener('click', toggleTheme);
+    mobileThemeBtn.addEventListener('click', toggleTheme);
+    updateIcons(html.classList.contains('dark'));
+
+    // Mobile Menu
+    const menuBtn = document.getElementById('menuToggleBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Project Filter
+    function filterProjects(cat) {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('bg-cyan-600', 'text-white', 'shadow-md');
+        btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+      });
+      event.currentTarget.classList.add('bg-cyan-600', 'text-white', 'shadow-md');
+      event.currentTarget.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+
+      document.querySelectorAll('.project-card').forEach(card => {
+        if (cat === 'all' || card.classList.contains(cat)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal data
+    const modalDetails = {
+      'coubot': {
+        title: 'CouBot Delivery Robot (Graduation Project)',
+        category: 'Robotics & AI • Sep 2025 – Jul 2026',
+        desc: 'CouBot is an end-to-end autonomous delivery robotics solution developed as a flagship Graduation Project. It unifies embedded hardware engineering with software services: a mobile ordering app for end-users to place and trace deliveries, a centralized web-based monitoring dashboard for real-time telemetry, battery status, and route oversight, and an on-board robotic control system engineered for precision navigation.',
+        features: ['Centralized web-based monitoring dashboard for remote fleet oversight', 'Integrated mobile ordering app built for seamless client interaction', 'Real-time position, telemetry, and delivery status tracking', 'Autonomous hardware actuation and sensor-driven navigation control'],
+        tech: ['Robotics Control', 'Embedded Systems', 'Flutter', 'Web Dashboard', 'IoT', 'C / C++']
+      },
+      'virtual-mouse': {
+        title: 'Virtual Mouse — AI Gesture Control',
+        category: 'Robotics & AI • Oct 2023 – Jul 2024',
+        desc: 'Engineered as a Semi-Graduation Project, the Virtual Mouse system leverages state-of-the-art computer vision and artificial intelligence algorithms to provide touchless human-computer interaction. Using video stream inputs, it tracks hand landmarks in real time and translates intuitive finger gestures into smooth mouse cursor motion, left/right clicks, dragging, and scrolling.',
+        features: ['Touchless desktop navigation using standard webcam video feed', 'Sub-millisecond hand landmark tracking and gesture parsing', 'Custom gesture mapping for click, double click, drag, and scroll', 'Robust performance across different lighting conditions and backgrounds'],
+        tech: ['Python', 'OpenCV', 'AI Models', 'Computer Vision', 'Gesture Recognition']
+      },
+      'spray-arm': {
+        title: 'Robotic Spray Painting Arm',
+        category: 'Robotics & Embedded • Apr 2026',
+        desc: 'Designed and implemented an articulated multi-axis robotic arm specifically tailored for precision spray painting applications. The arm responds in real time to input from a specialized hand controller, allowing operators to achieve uniform coating thickness while keeping personnel safely isolated from hazardous aerosol fumes.',
+        features: ['Multi-axis kinematic control for smooth angular articulation', 'Ergonomic hand controller with direct servo response', 'Consistent spray velocity and nozzle actuation calibration', 'Protective isolation for operators in hazardous painting environments'],
+        tech: ['Robotics', 'Microcontroller Interfacing', 'Motor Drivers', 'Hardware Control', 'Circuit Design']
+      },
+      'restaurant-dashboard': {
+        title: 'Restaurant Management Dashboard (Web)',
+        category: 'Web & UI/UX • Apr 2026',
+        desc: 'A high-performance administrative web platform designed to streamline full-cycle restaurant operations. It features interactive data visualizations for revenue and sales trends, real-time inventory level alerts, menu item profitability analysis, and live order status tracking with an intuitive, modern user interface.',
+        features: ['Dynamic charts and metrics for daily, weekly, and monthly sales trends', 'Automated low-stock notifications and supplier replenishment workflows', 'Order fulfillment pipeline from kitchen queue to delivery dispatch', 'Role-based interface designed with clean typography and dark/light UI'],
+        tech: ['UI/UX Design', 'Figma', 'Web Development', 'Data Visualization', 'Inventory Systems']
+      },
+      'food-desktop': {
+        title: 'Food Ordering App (.NET Desktop)',
+        category: 'Desktop & .NET • Dec 2025',
+        desc: 'Developed a robust desktop application engineered in C# on the .NET framework. It implements an architecture with two distinct operational modes: a customer-facing kiosk interface for browsing categorized food items and placing orders, and an authenticated employee-only backend for editing menus, updating real-time pricing, and managing item imagery.',
+        features: ['Dual-access architecture: Customer Kiosk vs. Manager Admin portal', 'Real-time pricing, item availability, and discount updates', 'Rich media gallery integration for culinary presentations', 'Persistent local database storage with rapid search and filter'],
+        tech: ['C#', '.NET Framework', 'Desktop GUI', 'Database Architecture', 'Event-Driven UI']
+      },
+      'food-ui': {
+        title: 'Mobile Food Ordering UI/UX Prototype',
+        category: 'UI/UX Design • Dec 2025',
+        desc: 'Crafted a comprehensive mobile design system and clickable prototype for a food delivery platform in Figma. Built around user research insights, the application optimizes the path from discovery to checkout through sticky filters, visual dietary tags, clean order customization sheets, and transparent delivery trackers.',
+        features: ['Comprehensive design system with cohesive color tokens and typography', 'Streamlined 3-step checkout flow minimizing order abandonment', 'Accessible contrast standards and thumb-friendly touch targets', 'Interactive micro-animations and component variants'],
+        tech: ['Figma', 'UI/UX Design', 'Mobile Prototyping', 'Design Systems', 'User Flows']
+      },
+      'hadeity': {
+        title: 'Hadeity — Gift List Sharing App',
+        category: 'Mobile & Cloud • Apr 2025',
+        desc: 'Hadeity is a social wishlist application designed to make gift-giving personalized and transparent. Built using Flutter and Dart with Firebase Firestore as the cloud backend, users can curate gift lists, share them with specific friend circles, reserve gifts anonymously to avoid duplicates, and receive notification updates.',
+        features: ['Real-time cloud database synchronization via Cloud Firestore', 'Collaborative wishlist sharing across social connections', 'Anonymous gift reservation mechanism to preserve surprises', 'Smooth, responsive animations built with Flutter widgets'],
+        tech: ['Flutter', 'Dart', 'Firebase Firestore', 'Cloud Sync', 'Mobile UI/UX']
+      },
+      'milo': {
+        title: "Milo's Adventure (2D Game)",
+        category: 'Games & Systems • Aug 2025',
+        desc: 'A fully playable 2D platformer adventure engineered from scratch using the Unity Engine and C# scripting. Features complex level mechanics including moving platforms, collectible power-ups, enemy patrol AI, custom sound effect design, and seamless state-machine character animations.',
+        features: ['Kinematic character controller with jump buffering and coyote time', 'State-driven enemy patrol, detection, and attack logic', 'Multi-layered parallax backgrounds and custom sprite animations', 'Integrated sound manager for background ambient scores and SFX'],
+        tech: ['Unity Engine', 'C#', '2D Physics', 'Game Architecture', 'Audio Engineering']
+      },
+      'embedded-doc': {
+        title: 'Embedded Systems Manual & 16 Circuits',
+        category: 'Embedded Systems • Apr 2025',
+        desc: 'Collaborated on the hardware realization and comprehensive technical documentation of 16 distinct embedded system circuits. Spans sensory inputs (temperature, ultrasonic, PIR), actuator outputs (stepper motors, LCD displays, relay switching), and serial communication interfaces programmed on PIC microcontrollers and Arduino platforms.',
+        features: ['Comprehensive documentation of 16 functional microcircuit prototypes', 'Sensor calibration tables and timing diagrams for precision control', 'Well-commented Embedded C codebases for peripheral interfacing', 'Power supply filtering and signal conditioning schematic layouts'],
+        tech: ['PIC Microcontrollers', 'Arduino', 'Embedded C', 'Circuit Schematics', 'Technical Writing']
+      }
+    };
+
+    const modal = document.getElementById('projectModal');
+    const modalCategory = document.getElementById('modalCategory');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalFeatures = document.getElementById('modalFeatures');
+    const modalTech = document.getElementById('modalTech');
+
+    function openModal(id) {
+      const data = modalDetails[id];
+      if (!data) return;
+      modalCategory.innerText = data.category;
+      modalTitle.innerText = data.title;
+      modalDesc.innerText = data.desc;
+      modalFeatures.innerHTML = data.features.map(f => `<li class="flex items-start gap-2"><span class="text-emerald-500 font-bold">✓</span><span>${f}</span></li>`).join('');
+      modalTech.innerHTML = data.tech.map(t => `<span class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-xs font-medium">${t}</span>`).join('');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'unset';
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // Contact Form
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      document.getElementById('contactForm').classList.add('hidden');
+      document.getElementById('formSuccess').classList.remove('hidden');
+    }
+  </script>
+</body>
 </html>
